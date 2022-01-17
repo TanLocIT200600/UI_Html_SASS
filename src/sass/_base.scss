@@ -5,7 +5,10 @@
   -webkit-tap-highlight-color: transparent;
   user-select: none;
 }
-
+html,
+body {
+  height: 100%;
+}
 html {
   font-size: 13px;
 }
@@ -13,7 +16,6 @@ html {
 body {
   font-family: "Roboto", sans-serif;
 }
-
 ul {
   list-style-type: none;
 }

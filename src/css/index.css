@@ -1,0 +1,380 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 13px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+a:hover {
+  color: #4267b2;
+}
+
+img {
+  max-width: 100%;
+}
+
+.color-blue {
+  color: #4267b2;
+}
+
+.bg-blue {
+  background-color: #4267b2;
+}
+
+.color-orange {
+  color: #fbb96b;
+}
+
+.bg-orange {
+  background-color: #fbb96b;
+}
+
+.color-pink {
+  color: #fe7e73;
+}
+
+.bg-pink {
+  background-color: #fe7e73;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.color-black {
+  color: #000;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.color-main {
+  color: #4267b2;
+}
+
+.bg-main {
+  background-color: #4267b2;
+}
+
+.grid-col-0 {
+  grid-template-columns: repeat(0, 1fr);
+}
+
+.grid-col-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-col-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-col-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.grid-col-7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.grid-col-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+
+@media only screen and (max-width: 1024px) {
+  .grid-col-md-0 {
+    grid-template-columns: repeat(0, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .grid-col-md-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .grid-col-md-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .grid-col-md-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .grid-col-md-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .grid-col-md-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .grid-col-md-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .grid-col-md-7 {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .grid-col-md-8 {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-col-sm-0 {
+    grid-template-columns: repeat(0, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-col-sm-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-col-sm-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-col-sm-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-col-sm-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-col-sm-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-col-sm-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-col-sm-7 {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-col-sm-8 {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1620px;
+  padding: 0 50px;
+  margin: auto;
+}
+@media only screen and (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+.main {
+  margin-top: 170px;
+  margin-bottom: 2rem;
+  min-height: 100vh;
+}
+@media only screen and (max-width: 1024px) {
+  .main {
+    margin-top: calc(70px + 20px);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main {
+    margin-top: calc(40px + 10px);
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.header {
+  background-color: #fff0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  height: 170px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: height 0.3s ease;
+}
+.header.shrink {
+  height: 100px;
+  box-shadow: rgba(49, 51, 53, 0.66) 0px 8px 24px;
+  z-index: 100;
+  background-color: black;
+}
+.header__logo img {
+  width: 150px;
+  height: 70px;
+}
+.header__menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+.header__menu__item {
+  color: white;
+  font-size: 1.3rem;
+}
+.header__menu__item.active {
+  font-weight: bold;
+}
+
+.slick-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1137px;
+  background-image: linear-gradient(0, rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url(https://veritaslegis.com/wp-content/uploads/2019/11/criminal-defense-lawyer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slick-slider__left-arrow, .slick-slider__right-arrow {
+  position: absolute;
+  top: 42%;
+  font-size: 4rem;
+  background: #3330;
+  border: none;
+  color: #767676;
+}
+.slick-slider__left-arrow {
+  left: 10%;
+}
+.slick-slider__content {
+  width: 100%;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 1110px;
+  font-family: Source Sans Pro;
+  color: white;
+}
+.slick-slider__content h3,
+.slick-slider__content h5 {
+  line-height: 140%;
+  font-weight: bold;
+  width: 510px;
+}
+.slick-slider__content h3 {
+  font-size: 69px;
+}
+.slick-slider__content h5 {
+  font-size: 28px;
+}
+.slick-slider__content p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 140%;
+  width: 510px;
+  text-align: center;
+}
+.slick-slider__content button {
+  background: #0d90c2;
+  padding: 10px 30px;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+  text-transform: capitalize;
+  margin-top: 15px;
+}
+.slick-slider__right-arrow {
+  right: 10%;
+}
+
+.about {
+  width: 100%;
+  height: 100px;
+  background-color: yellow;
+}/*# sourceMappingURL=index.css.map */
