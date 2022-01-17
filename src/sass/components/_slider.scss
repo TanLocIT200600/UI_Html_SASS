@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 1137px;
+  height: 1000px;
   background-image: linear-gradient(
       0,
       rgba(18, 18, 18, 0.8),
@@ -12,6 +12,7 @@
     url(https://veritaslegis.com/wp-content/uploads/2019/11/criminal-defense-lawyer.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: -1;
 
   &__left-arrow,
   &__right-arrow {

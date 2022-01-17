@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react'
 import AboutUs from '../components/AboutUs'
+import Blog from '../components/Blog'
+import CheckList from '../components/CheckList'
 import SlickCarousel from '../components/SlickCarousel'
 
 const Home = () => {
@@ -7,6 +9,8 @@ const Home = () => {
     <Fragment>
       <SlickCarousel />
       <AboutUs />
+      <CheckList />
+      <Blog />
     </Fragment>
   )
 }

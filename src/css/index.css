@@ -6,11 +6,6 @@
   user-select: none;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 html {
   font-size: 13px;
 }
@@ -231,6 +226,7 @@ img {
 .container {
   width: 100%;
   max-width: 1620px;
+  min-height: 100vh;
   padding: 0 50px;
   margin: auto;
 }
@@ -247,7 +243,7 @@ img {
 
 .main {
   margin-top: 170px;
-  margin-bottom: 2rem;
+  margin-bottom: 10%;
   min-height: 100vh;
 }
 @media only screen and (max-width: 1024px) {
@@ -263,6 +259,11 @@ img {
 
 .grid {
   display: grid;
+}
+
+ol,
+ul {
+  padding-left: 0;
 }
 
 .layout {
@@ -313,10 +314,11 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 1137px;
+  height: 1000px;
   background-image: linear-gradient(0, rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url(https://veritaslegis.com/wp-content/uploads/2019/11/criminal-defense-lawyer.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: -1;
 }
 .slick-slider__left-arrow, .slick-slider__right-arrow {
   position: absolute;
@@ -375,6 +377,144 @@ img {
 
 .about {
   width: 100%;
-  height: 100px;
-  background-color: yellow;
+  height: 650px;
+  background-image: linear-gradient(0, rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url(https://images.unsplash.com/photo-1602722053020-af31042989d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9vayUyMHNoZWxmfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 140%;
+  left: 0;
+}
+.about__list {
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  margin: auto;
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about__list-membership, .about__list-working {
+  width: 330px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about__list-membership i, .about__list-working i {
+  font-size: 4rem;
+  color: white;
+}
+.about__list-membership h5, .about__list-working h5 {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.about__list-membership p, .about__list-working p {
+  color: white;
+  width: 290px;
+  text-align: center;
+  font-size: 15px;
+}
+.about__list-membership button, .about__list-working button {
+  background: #0d90c2;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  text-transform: capitalize;
+}
+.about__list-membership {
+  background-image: linear-gradient(0, rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url(https://t4.ftcdn.net/jpg/02/57/39/75/360_F_257397505_UIKaAyHxjaBT8YRVLTrQNGG7z8RdqOQB.jpg);
+  margin-right: 2rem;
+}
+.about__list-working {
+  background-image: linear-gradient(0, rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url(https://t3.ftcdn.net/jpg/02/97/04/44/240_F_297044418_mpZhBMnU7WHQEcfpkRp5rg7nAbuxknMM.jpg);
+}
+.about-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about-us__left {
+  width: 350px;
+  height: 330px;
+  margin-right: 5%;
+  margin-top: -10%;
+}
+.about-us__left__title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.8rem;
+  padding-bottom: 5px;
+  position: relative;
+}
+.about-us__left__title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 15%;
+  background: #c4c4c4;
+}
+.about-us__left__content {
+  font-size: 1.2rem;
+  color: #fff;
+  width: 100%;
+  line-height: 160%;
+  margin-top: 1.5rem;
+}
+.about-us__left__signature {
+  font-family: Mrs Saint Delafield;
+  color: #c7c7c7;
+  font-size: 2.5rem;
+  font-style: italic;
+}
+.about-us__left__branch {
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.about-us__right img {
+  width: 350px;
+  height: 390px;
+}
+
+.checkList {
+  width: 75%;
+  height: 200px;
+  background: #fff;
+  position: absolute;
+  top: 225%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 30px 40px;
+}
+.checkList p {
+  width: 400px;
+  font-size: 1.2rem;
+}
+.checkList__item {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+.checkList__item ul li {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.checkList__item ul li .fa-check {
+  font-size: 1.5rem;
+  color: #0d90c2;
+  margin-right: 1rem;
 }/*# sourceMappingURL=index.css.map */

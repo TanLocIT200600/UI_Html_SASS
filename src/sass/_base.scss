@@ -5,10 +5,6 @@
   -webkit-tap-highlight-color: transparent;
   user-select: none;
 }
-html,
-body {
-  height: 100%;
-}
 html {
   font-size: 13px;
 }
@@ -68,6 +64,7 @@ img {
 .container {
   width: 100%;
   max-width: 1620px;
+  min-height: 100vh;
   padding: 0 50px;
   margin: auto;
 
@@ -82,7 +79,7 @@ img {
 
 .main {
   margin-top: $header-height;
-  margin-bottom: 2rem;
+  margin-bottom: 10%;
   min-height: 100vh;
 
   @include tablet {
@@ -96,4 +93,8 @@ img {
 
 .grid {
   display: grid;
+}
+ol,
+ul {
+  padding-left: 0;
 }
