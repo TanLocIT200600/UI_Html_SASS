@@ -285,6 +285,19 @@ ul {
   align-items: center;
   transition: height 0.3s ease;
 }
+@media only screen and (max-width: 1024px) {
+  .header {
+    height: 70px;
+    box-shadow: rgba(49, 51, 53, 0.66) 0px 8px 24px;
+    justify-content: space-between;
+    padding: 0 5%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header {
+    height: 40px;
+  }
+}
 .header.shrink {
   height: 100px;
   box-shadow: rgba(49, 51, 53, 0.66) 0px 8px 24px;
@@ -295,17 +308,74 @@ ul {
   width: 150px;
   height: 70px;
 }
+@media only screen and (max-width: 1024px) {
+  .header__logo img {
+    width: 100px;
+    height: 40px;
+  }
+}
 .header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 50%;
 }
-.header__menu__item {
+.header__menu__item ~ .header__menu__item {
+  margin-left: 39px;
+}
+@media only screen and (max-width: 1024px) {
+  .header__menu__item ~ .header__menu__item {
+    margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header__menu__item ~ .header__menu__item {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .header__menu {
+    width: 5%;
+  }
+}
+.header__menu__close {
+  display: none;
+}
+.header__menu__mobile-toggle {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .header__menu__mobile-toggle {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+  }
+}
+.header__menu__item span {
   color: white;
   font-size: 1.3rem;
 }
-.header__menu__item.active {
+@media only screen and (max-width: 1024px) {
+  .header__menu__item span span {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .header__menu__item span {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    width: 20%;
+    height: 300px;
+    background-color: #fff;
+    color: #000;
+  }
+}
+.header__menu__item span.active {
   font-weight: bold;
 }
 
@@ -327,6 +397,7 @@ ul {
   background: #3330;
   border: none;
   color: #767676;
+  cursor: pointer;
 }
 .slick-slider__left-arrow {
   left: 10%;
@@ -492,7 +563,7 @@ ul {
 
 .checkList {
   width: 75%;
-  height: 200px;
+  height: 250px;
   background: #fff;
   position: absolute;
   top: 225%;
@@ -503,6 +574,7 @@ ul {
 .checkList p {
   width: 400px;
   font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 .checkList__item {
   display: flex;
@@ -517,4 +589,192 @@ ul {
   font-size: 1.5rem;
   color: #0d90c2;
   margin-right: 1rem;
+}
+
+.blogList {
+  width: 100%;
+  height: 970px;
+  background-color: #f5f5f5;
+  position: absolute;
+  top: 230%;
+  left: 0;
+  z-index: -1;
+  padding: 20% 10% 5% 10%;
+}
+.blogList__title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-left: 8%;
+  padding-bottom: 5px;
+  position: relative;
+}
+.blogList__title::before {
+  position: absolute;
+  content: " ";
+  bottom: 0;
+  height: 4px;
+  width: 4%;
+  background-color: royalblue;
+}
+.blogList__content {
+  width: 360px;
+  font-size: 1.2rem;
+  margin: 3% 0 3% 8%;
+}
+.blogList__colList {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 410px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.blogList__colList__colItem {
+  width: 300px;
+  background-color: #fff;
+  height: 430px;
+}
+.blogList__colList__colItem__img {
+  width: 100%;
+  height: 200px;
+  background-position: center;
+}
+.blogList__colList__colItem .img1 {
+  background-image: url(https://www.ctvnews.ca/polopoly_fs/1.4894318.1586807914!/httpImage/image.png_gen/derivatives/landscape_620/image.png);
+}
+.blogList__colList__colItem .img2 {
+  background-image: url(https://i.pinimg.com/474x/95/f8/5e/95f85e9c1f307582ad469b6dc8f25e31.jpg);
+}
+.blogList__colList__colItem .img3 {
+  background-image: url(https://img.freepik.com/free-photo/people-talking-each-other-before-meeting_23-2148817040.jpg?size=626&ext=jpg);
+}
+.blogList__colList__colItem__content {
+  padding: 10px 25px 10px 25px;
+}
+.blogList__colList__colItem__content span {
+  color: #545454;
+}
+.blogList__colList__colItem__content h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.blogList__colList__colItem__content p {
+  font-size: 1.1rem;
+  text-transform: lowercase;
+}
+.blogList__colList__colItem__content button {
+  background: #0d90c2;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+.blogList__img {
+  width: 100px;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+}
+
+.out-partner {
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  position: absolute;
+  top: 365%;
+  left: 0;
+}
+.out-partner__body {
+  padding: 5% 20% 5% 20%;
+}
+.out-partner__body__title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-bottom: 5px;
+  position: relative;
+}
+.out-partner__body__title::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 5%;
+  height: 4px;
+  left: 0;
+  background-color: royalblue;
+}
+.out-partner__body__branch {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 8%;
+}
+
+.footer {
+  width: 100%;
+  height: 400px;
+  background-color: royalblue;
+  position: absolute;
+  top: 420%;
+  left: 0;
+  background-image: linear-gradient(0, rgba(18, 18, 18, 0.4), rgba(18, 18, 18, 0.4)), url(https://xpresslenses.com/wp-content/uploads/2016/11/footer-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.footer__list {
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25%;
+}
+.footer__list__item h4 {
+  font-family: Source Code Pro;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+.footer__list__item span {
+  width: 204px;
+  font-size: 1.2rem;
+  display: block;
+}
+.footer__list__item p {
+  font-size: 1.2rem;
+  width: 235px;
+}
+.footer__list__item input[type=email] {
+  display: block;
+  padding: 5px 15px;
+  width: 230px;
+  margin-bottom: 1rem;
+}
+.footer__list__item button {
+  background: #0d90c2;
+  color: white;
+  font-size: 1.3rem;
+  padding: 5px 25px;
+  border: none;
+  text-transform: capitalize;
+}
+.footer__list__item__listicon {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}
+.footer__list__item__listicon i {
+  font-size: 2rem;
 }/*# sourceMappingURL=index.css.map */

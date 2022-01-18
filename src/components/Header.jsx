@@ -61,6 +61,10 @@ const Header = () => {
     }
   }, [])
 
+  const menuLeft = useRef(null)
+
+  const menuToggle = () => menuLeft.current.classList.toggle('active')
+
   return (
     <div className="container">
       <div className="header" ref={headerRef}>
@@ -70,6 +74,12 @@ const Header = () => {
           </Link>
         </div>
         <div className="header__menu">
+          <div className="header__menu__mobile-toggle" onClick={menuToggle}>
+            <i class="fas fa-bars"></i>
+          </div>
+          <div className="header__menu__close" onClick={menuToggle}>
+            <i class="fas fa-chevron-left"></i>
+          </div>
           {
             mainNav.map((item, index) => (
               <div
