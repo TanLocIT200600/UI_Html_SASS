@@ -80,18 +80,21 @@ const Header = () => {
           <div className="header__menu__close" onClick={menuToggle}>
             <i class="fas fa-chevron-left"></i>
           </div>
-          {
-            mainNav.map((item, index) => (
-              <div
-                key={index}
-                className={`header__menu__item ${index === activeNav ? 'active' : ''}`}
-              >
-                <Link to={item.path}>
-                  <span>{item.display}</span>
-                </Link>
-              </div>
-            ))
-          }
+          <div className="header__menu__list">
+            {
+              mainNav.map((item, index) => (
+                <div
+                  key={index}
+                  className={`header__menu__item ${index === activeNav ? 'active' : ''}`}
+                >
+                  <Link to={item.path}>
+                    <span>{item.display}</span>
+                  </Link>
+                </div>
+              ))
+            }
+          </div>
+
         </div>
       </div>
     </div >
