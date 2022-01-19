@@ -9,6 +9,7 @@
     url(https://images.unsplash.com/photo-1602722053020-af31042989d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9vayUyMHNoZWxmfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   position: absolute;
   @include desktop {
     top: 105%;
@@ -18,6 +19,12 @@
     top: 88%;
     left: 0;
     min-width: 1100px;
+  }
+  @include mobile {
+    top: 55%;
+    left: 0;
+    min-width: 1100px;
+    height: 420px;
   }
 
   &__list {
@@ -29,6 +36,9 @@
     top: -15%;
     left: 50%;
     transform: translateX(-50%);
+    @include mobile {
+      width: 50%;
+    }
 
     &-membership,
     &-working {
@@ -40,22 +50,37 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      @include mobile {
+        width: 220px;
+        height: 200px;
+      }
 
       & i {
         font-size: 4rem;
         color: white;
+
+        @include mobile {
+          font-size: 2.5rem;
+        }
       }
       & h5 {
         font-size: 18px;
         color: white;
         font-weight: bold;
         margin-top: 1rem;
+        @include mobile {
+          font-size: 14px;
+        }
       }
       & p {
         color: white;
         width: 290px;
         text-align: center;
         font-size: 15px;
+        @include mobile {
+          font-size: 10px;
+          width: 180px;
+        }
       }
       & button {
         background: #0d90c2;
@@ -63,6 +88,10 @@
         border: none;
         color: white;
         text-transform: capitalize;
+        @include mobile {
+          padding: 5px 10px;
+          font-size: 10px;
+        }
       }
     }
 
@@ -95,6 +124,9 @@
     @include tablet {
       top: 35%;
     }
+    @include mobile {
+      top: 35%;
+    }
 
     &__left {
       width: 350px;
@@ -102,12 +134,21 @@
       margin-right: 5%;
       margin-top: -10%;
 
+      @include mobile {
+        width: 250px;
+        height: 250px;
+        margin-top: 0;
+        margin-right: 2%;
+      }
       &__title {
         color: #fff;
         font-weight: 700;
         font-size: 1.8rem;
         padding-bottom: 5px;
         position: relative;
+        @include mobile {
+          font-size: 1.2rem;
+        }
 
         &::before {
           content: "";
@@ -126,18 +167,28 @@
         width: 100%;
         line-height: 160%;
         margin-top: 1.5rem;
+        @include mobile {
+          font-size: 10px;
+          margin-top: 10px;
+        }
       }
       &__signature {
         font-family: Mrs Saint Delafield;
         color: #c7c7c7;
         font-size: 2.5rem;
         font-style: italic;
+        @include mobile {
+          font-size: 1.5rem;
+        }
       }
       &__branch {
         color: white;
         font-size: 1rem;
         text-transform: uppercase;
         letter-spacing: 1px;
+        @include mobile {
+          font-size: 11px;
+        }
       }
     }
 
@@ -145,6 +196,10 @@
       & img {
         width: 350px;
         height: 390px;
+        @include mobile {
+          width: 220px;
+          height: 270px;
+        }
       }
     }
   }
