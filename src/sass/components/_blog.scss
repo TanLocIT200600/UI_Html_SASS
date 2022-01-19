@@ -3,14 +3,14 @@
   background-color: #f5f5f5;
   position: absolute;
   z-index: -1;
-  padding: 20% 10% 5% 10%;
   @include desktop {
     top: 170%;
     left: 0;
     height: 1050px;
+    padding: 35% 10% 5% 10%;
   }
   @include tablet {
-    top: 150%;
+    top: 160%;
     left: 0;
     height: 970px;
     min-width: 1100px;

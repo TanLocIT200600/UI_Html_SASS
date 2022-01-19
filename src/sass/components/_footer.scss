@@ -1,6 +1,5 @@
 .footer {
   width: 100%;
-  height: 500px;
   position: absolute;
   background-image: linear-gradient(
       0,
@@ -15,16 +14,19 @@
   @include desktop {
     top: 330%;
     left: 0;
+    height: 400px;
   }
   @include tablet {
-    top: 330%;
+    top: 318%;
     left: 0;
     min-width: 1100px;
+    height: 380px;
   }
   @include mobile {
     top: 277%;
     left: 0;
     min-width: 1100px;
+    height: 500px;
   }
 
   &__list {

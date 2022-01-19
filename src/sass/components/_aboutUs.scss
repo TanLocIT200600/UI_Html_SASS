@@ -12,11 +12,11 @@
   background-position: center;
   position: absolute;
   @include desktop {
-    top: 105%;
+    top: 103%;
     left: 0;
   }
   @include tablet {
-    top: 88%;
+    top: 86%;
     left: 0;
     min-width: 1100px;
   }
@@ -30,14 +30,26 @@
   &__list {
     display: flex;
     justify-content: center;
-    width: 65%;
     margin: auto;
     position: absolute;
-    top: -15%;
-    left: 50%;
-    transform: translateX(-50%);
+
+    @include desktop {
+      width: 65%;
+      top: -8%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include tablet {
+      width: 65%;
+      top: -15%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
     @include mobile {
       width: 50%;
+      top: -15%;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     &-membership,

@@ -52,10 +52,14 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 40%;
+    @include desktop {
+      width: 55%;
+    }
 
     &__item ~ &__item {
-      margin-left: 39px;
+      @include desktop {
+        margin-left: 20px;
+      }
 
       @include tablet {
         margin-left: 20px;
@@ -190,6 +194,10 @@
           @include tablet {
             font-weight: 600;
             margin-left: 13%;
+          }
+          @include mobile {
+            margin-left: 11% !important;
+            font-weight: 600;
           }
         }
       }

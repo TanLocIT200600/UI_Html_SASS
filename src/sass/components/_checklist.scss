@@ -6,28 +6,34 @@
   transform: translateX(-50%);
   padding: 30px 40px;
   @include desktop {
-    top: 170%;
+    top: 183%;
     left: 50%;
   }
   @include tablet {
-    top: 168%;
+    top: 160%;
     left: 50%;
     height: 200px;
-    width: 75%;
-    transform: translateX(-45%);
+    width: 85%;
+    transform: translateX(-25%);
   }
   @include mobile {
-    top: 107%;
-    left: 100%;
+    top: 103%;
+    left: 50%;
     height: 150px;
-    min-width: 520px;
-    transform: translateX(-35%);
+    min-width: 550px;
+    transform: translateX(10%);
   }
 
   & p {
     width: 400px;
     font-size: 1.2rem;
     margin-bottom: 2rem;
+
+    @include tablet {
+      width: 330px;
+      font-size: 16px;
+      margin-bottom: 1rem;
+    }
     @include mobile {
       width: 200px;
       font-size: 10px;
@@ -46,6 +52,9 @@
     & ul li {
       @include desktop {
         font-size: 1.1rem;
+      }
+      @include tablet {
+        font-size: 11px;
       }
 
       @include mobile {

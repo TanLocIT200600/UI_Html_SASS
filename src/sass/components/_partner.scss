@@ -8,9 +8,10 @@
     left: 0;
   }
   @include tablet {
-    top: 280%;
+    top: 281%;
     left: 0;
-    height: 250px;
+    height: 300px;
+    min-width: 1100px;
   }
   @include mobile {
     top: 245%;
