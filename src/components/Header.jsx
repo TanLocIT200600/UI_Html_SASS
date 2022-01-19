@@ -77,15 +77,16 @@ const Header = () => {
           <div className="header__menu__mobile-toggle" onClick={menuToggle}>
             <i class="fas fa-bars"></i>
           </div>
-          <div className="header__menu__close" onClick={menuToggle}>
-            <i class="fas fa-chevron-left"></i>
-          </div>
-          <div className="header__menu__list">
+          <div className="header__menu__list" ref={menuLeft}>
+            <div className="header__menu__list__close" onClick={menuToggle}>
+              <i class="fas fa-chevron-right"></i>
+            </div>
             {
               mainNav.map((item, index) => (
                 <div
                   key={index}
                   className={`header__menu__item ${index === activeNav ? 'active' : ''}`}
+                  onClick={menuToggle}
                 >
                   <Link to={item.path}>
                     <span>{item.display}</span>

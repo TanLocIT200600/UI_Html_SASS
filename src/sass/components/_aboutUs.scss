@@ -10,8 +10,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  top: 140%;
-  left: 0;
+  @include desktop {
+    top: 105%;
+    left: 0;
+  }
+  @include tablet {
+    top: 88%;
+    left: 0;
+    min-width: 1100px;
+  }
 
   &__list {
     display: flex;
@@ -85,6 +92,10 @@
     top: 40%;
     left: 50%;
     transform: translateX(-50%);
+    @include tablet {
+      top: 35%;
+    }
+
     &__left {
       width: 350px;
       height: 330px;

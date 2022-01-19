@@ -3,10 +3,18 @@
   height: 250px;
   background: #fff;
   position: absolute;
-  top: 225%;
-  left: 50%;
   transform: translateX(-50%);
   padding: 30px 40px;
+  @include desktop {
+    top: 170%;
+    left: 50%;
+  }
+  @include tablet {
+    top: 165%;
+    left: 50%;
+    height: 200px;
+    width: 75%;
+  }
 
   & p {
     width: 400px;
@@ -17,10 +25,13 @@
   &__item {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 85%;
 
     & ul li {
-      font-size: 1.5rem;
+      @include desktop {
+        font-size: 1.1rem;
+      }
+
       font-weight: bold;
       & .fa-check {
         font-size: 1.5rem;

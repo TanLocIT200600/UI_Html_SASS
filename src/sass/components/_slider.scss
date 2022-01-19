@@ -13,6 +13,16 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
+  @include tablet {
+    width: 100%;
+    height: 700px;
+    min-width: 1100px;
+  }
+  @include mobile {
+    width: 100%;
+    height: 450px;
+    min-width: 840px;
+  }
 
   &__left-arrow,
   &__right-arrow {
@@ -43,12 +53,31 @@
       line-height: 140%;
       font-weight: bold;
       width: 510px;
+      text-align: center;
+      @include tablet {
+        width: 400px;
+      }
+      @include mobile {
+        width: 300px;
+      }
     }
     h3 {
       font-size: 69px;
+      @include tablet {
+        font-size: 50px;
+      }
+      @include mobile {
+        font-size: 28px;
+      }
     }
     h5 {
       font-size: 28px;
+      @include tablet {
+        font-size: 20px;
+      }
+      @include mobile {
+        font-size: 14px;
+      }
     }
     p {
       font-family: Nunito;
@@ -58,6 +87,14 @@
       line-height: 140%;
       width: 510px;
       text-align: center;
+      @include tablet {
+        width: 390px;
+        font-size: 17px;
+      }
+      @include mobile {
+        width: 270px;
+        font-size: 12px;
+      }
     }
     button {
       background: #0d90c2;
@@ -67,6 +104,17 @@
       color: white;
       text-transform: capitalize;
       margin-top: 15px;
+      @include mobile {
+        padding: 6px 20px;
+        font-size: 1rem;
+        margin-top: 10px;
+      }
+    }
+    @include tablet {
+      height: 700px;
+    }
+    @include mobile {
+      height: 450px;
     }
   }
 
